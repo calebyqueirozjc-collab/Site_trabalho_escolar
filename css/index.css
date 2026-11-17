@@ -147,6 +147,24 @@ footer {
 }
 
 @media (max-width: 700px) {
+    body:not(.pagina-esporte) {
+        height: auto;
+        min-height: 100vh;
+        min-height: 100dvh;
+    }
+
+    .abas {
+        flex: 0 0 auto;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-content: start;
+        overflow: visible;
+        padding: 16px;
+    }
+
+    .aba {
+        width: min(100%, 160px);
+    }
+
     .pagina-esporte {
         height: auto;
         min-height: 100dvh;
@@ -164,5 +182,34 @@ footer {
 
     .imagem-esporte {
         height: min(42vh, 320px);
+    }
+}
+
+@media (max-width: 420px) {
+    body {
+        padding: 12px;
+    }
+
+    .abas {
+        gap: 8px;
+        padding: 12px;
+    }
+
+    .aba {
+        padding: 8px;
+        text-align: center;
+    }
+
+    .detalhe-conteudo {
+        gap: 16px;
+        padding: 12px;
+    }
+
+    .imagem-esporte {
+        height: min(38vh, 260px);
+    }
+
+    footer {
+        line-height: 1.5;
     }
 }
